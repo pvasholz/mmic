@@ -1,0 +1,183 @@
+/* Match Made In Class — prototype global styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: #f9fafb;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1c1c1c;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Screen transition */
+.screen-enter {
+  animation: screenIn 0.28s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+@keyframes screenIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Facilitator chrome (top-right) — used during in-person user testing */
+.facilitator-bar {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 90;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(112, 128, 144, 0.25);
+  border-radius: 999px;
+  padding: 4px 6px 4px 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: #708090;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.facilitator-bar span {
+  font-weight: 600;
+}
+
+.facilitator-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #0047ab;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.facilitator-bar button:hover {
+  background: rgba(0, 71, 171, 0.08);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Likert matrix: mobile layout ───────────────────────────── */
+.likert-mobile-anchors {
+  display: none;
+}
+
+/* On desktop these wrappers are invisible to the grid — children
+   participate as direct grid items, preserving the column layout. */
+.likert-cells,
+.skill-cells {
+  display: contents;
+}
+
+@media (max-width: 600px) {
+  /* ── Personality Likert matrix ── */
+  .likert-wrap {
+    overflow: visible !important;
+  }
+
+  .likert-header {
+    display: none !important;
+  }
+
+  .likert-mobile-anchors {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 14px;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #708090;
+    background: #f3f4f6;
+    border-bottom: 1px solid rgba(112, 128, 144, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .likert-row {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 14px 16px !important;
+    gap: 0 !important;
+  }
+
+  .likert-label {
+    padding-right: 0 !important;
+    margin-bottom: 12px;
+    font-size: 14px !important;
+  }
+
+  .likert-cells {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .likert-cells > button {
+    flex: 1;
+    padding: 8px 2px !important;
+  }
+
+  /* ── Skill rating matrix ── */
+  .skill-wrap {
+    overflow: visible !important;
+  }
+
+  .skill-header {
+    display: none !important;
+  }
+
+  .skill-row {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 12px 16px !important;
+    gap: 0 !important;
+  }
+
+  .skill-label {
+    margin-bottom: 10px;
+    font-size: 14px !important;
+  }
+
+  .skill-cells {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .skill-cells > button {
+    flex: 1;
+    padding: 8px 2px !important;
+  }
+
+  /* ── Availability grid ── */
+  .meet-part-header {
+    font-size: 9px !important;
+    letter-spacing: .04em !important;
+  }
+}
