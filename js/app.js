@@ -32,7 +32,7 @@ function App() {
     setShowScenario(true);
     setIdx(0);
     setStamps({});
-    try { localStorage.removeItem('groupa_q_v1'); } catch (e) {}
+    try { localStorage.removeItem('groupa_q_v1'); localStorage.removeItem('groupa_user_v1'); } catch (e) {}
     delete window.__matchPromise;
     delete window.__matchResult;
   };

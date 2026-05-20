@@ -653,7 +653,13 @@ function QuestionnaireScreen(_ref0) {
   var overallPct = totalRequired === 0 ? 0 : Math.min(100, totalAnswered / totalRequired * 100);
   var goNext = () => {
     if (isLast) {
-      try { localStorage.removeItem('groupa_q_v1'); } catch (e) {}
+      try {
+        localStorage.setItem('groupa_user_v1', JSON.stringify({
+          firstName: s.firstName, lastName: s.lastName, location: s.location,
+          skills: s.skills, meetTimes: Array.from(s.meetTimes)
+        }));
+        localStorage.removeItem('groupa_q_v1');
+      } catch (e) {}
       var payload = buildSubmissionPayload(s);
       window.__matchPromise = fetch('/.netlify/functions/match', {
         method: 'POST',

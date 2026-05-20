@@ -987,7 +987,7 @@ var TEAM = [{
 function getDynamicFallbackTeam() {
   var dynamicTeam = JSON.parse(JSON.stringify(TEAM));
   try {
-    var raw = localStorage.getItem('groupa_q_v1');
+    var raw = localStorage.getItem('groupa_user_v1') || localStorage.getItem('groupa_q_v1');
     if (raw) {
       var s = JSON.parse(raw);
       var fullName = [s.firstName, s.lastName].filter(Boolean).join(' ');
