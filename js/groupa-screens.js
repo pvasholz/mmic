@@ -1145,14 +1145,14 @@ function GroupScreen(_ref11) {
       color: _T.ink,
       lineHeight: 1.25
     }
-  }, isLlm ? "Group ".concat(groupId) : "Meet Team Indigo."), /*#__PURE__*/React.createElement("p", {
+  }, isLlm ? "Group ".concat(groupId) : "Your Project Team."), /*#__PURE__*/React.createElement("p", {
     style: {
       fontFamily: '"Inter", sans-serif',
       fontSize: 15,
       color: _T.neutral,
       marginTop: 8
     }
-  }, "HCI 5xx \xB7 Spring 2026 \xB7 ".concat(isLlm ? groupId : "Group 4 of 6"))), /*#__PURE__*/React.createElement("div", {
+  }, "HCI 5xx \xB7 Spring 2026 \xB7 ".concat(isLlm ? groupId : "Project Group")), /*#__PURE__*/React.createElement("div", {
     style: {
       background: "linear-gradient(135deg, ".concat(_T.primary, ", ").concat(_T.primary, "dd 60%, ").concat(_T.success, ")"),
       backgroundBlendMode: 'multiply',
@@ -1176,32 +1176,7 @@ function GroupScreen(_ref11) {
       opacity: 0.6,
       mixBlendMode: 'overlay'
     }
-  }), isLlm ? null : /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'relative'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: '"Inter", sans-serif',
-      fontSize: 11,
-      fontWeight: 600,
-      letterSpacing: '.1em',
-      opacity: 0.85
-    }
-  }, "TEAM COMPATIBILITY"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: '"Poppins", sans-serif',
-      fontWeight: 700,
-      fontSize: 44,
-      lineHeight: 1,
-      marginTop: 2
-    }
-  }, "91", /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontSize: 22,
-      opacity: 0.7
-    }
-  }, "%"))), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
       minWidth: 220,
@@ -1214,7 +1189,7 @@ function GroupScreen(_ref11) {
       lineHeight: 1.55,
       opacity: 0.95
     }
-  }, isLlm ? headline : "High compatibility across schedule availability and complementary project skills. The team balances technical depth with research and project management \u2014 no major gaps."))), /*#__PURE__*/React.createElement("div", {
+  }, isLlm ? headline : "High compatibility across schedule availability and complementary project skills. The team balances technical depth with research and project management \u2014 no major gaps.")))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',

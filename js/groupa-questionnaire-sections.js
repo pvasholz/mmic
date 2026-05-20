@@ -64,13 +64,13 @@ function StepLength(_ref2) {
   var opts = [{
     key: 'short',
     title: 'Short version',
-    time: '~3 min',
+    time: '~5 min',
     blurb: 'A 10-item personality check (TIPI). Best when most of the class is short on time.',
     bullets: ['22 required questions', '10-item personality scale', 'Single page per section']
   }, {
     key: 'long',
     title: 'Long version',
-    time: '~7 min',
+    time: '~10 min',
     blurb: 'A 20-item personality check (Mini-IPIP). More signal for matching, but takes longer.',
     bullets: ['22 required questions', '20-item personality scale', 'More reliable Big-Five scoring']
   }];
